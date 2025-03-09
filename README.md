@@ -62,7 +62,7 @@ FROM netflix
 GROUP BY title
 HAVING count(*) > 1;
 ```
-🔍 Insight: Some titles appear multiple times, possibly due to remakes, re-releases, or regional licensing variations. Netflix can optimize its catalog by reducing redundant content.
+🔍 Insight:  Some titles appear multiple times, possibly due to remakes, re-releases, or regional licensing variations. Netflix can optimize its catalog by reducing redundant content.
 
 ## 2. Movies vs. TV Shows – Which Format Dominates?
 ```sql
@@ -71,7 +71,7 @@ count(*) as total_count
 from netflix
 group by type;
 ```
-🔍 Insight: While movies have historically dominated, TV Shows are gaining traction, likely due to higher engagement and binge-watching culture. Strategic Move: Invest more in original series!
+🔍 Insight:  While movies have historically dominated, TV Shows are gaining traction, likely due to higher engagement and binge-watching culture. Strategic Move: Invest more in original series!
 
 ## 3. Top 5 Countries Producing the Most Content
 ```sql
