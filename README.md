@@ -1,9 +1,16 @@
 # 🎬 Netflix Movies & TV Shows Data Analysis using SQL
+# 🚀 Unveiling trends in Netflix content to drive data-backed decision-making!
 
 ![](https://github.com/Palak019/netflix_sql_project/blob/main/netflix%20logo.jpg)
 
-## Overview
-This project unveils powerful insights into Netflix’s content evolution, highlighting production trends, top genres, ratings, and regional dominance. It delivers data-driven intelligence for strategic decision-making, enhancing content curation and audience engagement. 🚀
+## 📌 Overview
+Netflix dominates the global streaming industry, but what drives its content strategy? This project uncovers:
+
+✔️ How Netflix’s content library evolved over time
+✔️ Which regions dominate content production
+✔️ The most popular genres & ratings
+✔️ Trends in Movies vs. TV Shows
+✔️ Business insights to optimize content strategies
 
 ## Objectives
 ✅ Unveil Content Evolution – Analyze Netflix’s content expansion and production trends over time.
