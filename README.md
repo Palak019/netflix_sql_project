@@ -290,7 +290,7 @@ where country is not null
 group by release_year , country
 order by release_year desc , rank;
  ```
-🔍 Insight: Some countries consistently dominate Netflix’s content pipeline. Tracking these trends helps identify investment opportunities.
+🔍 Insight: Regions with steady content expansion indicate high engagement. Netflix should prioritize these areas for future content investments.
 
 ## 22. How do content ratings change yearly?
 ```sql
