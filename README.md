@@ -6,10 +6,14 @@
 ## 📌 Overview
 Netflix dominates the global streaming industry, but what drives its content strategy? This project uncovers:
 
-## ✔️ How Netflix’s content library evolved over time
-## ✔️ Which regions dominate content production
+✔️ How Netflix’s content library evolved over time
+
+✔️ Which regions dominate content production
+
 ✔️ The most popular genres & ratings
+
 ✔️ Trends in Movies vs. TV Shows
+
 ✔️ Business insights to optimize content strategies
 
 ## Objectives
