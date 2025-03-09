@@ -332,6 +332,22 @@ FROM content_growth
 WHERE prev_year_count IS NOT NULL
 ORDER BY country, release_year DESC;
 ```
+## 📊 Key Takeaways & Business Recommendations
+
+✅ Invest in Regional Content – Expanding into emerging markets like South Korea & Latin America can drive global growth.
+
+
+✅ Balance Movies & TV Shows – With the rise of binge culture, more investment in original TV Shows can boost engagement.
+
+
+✅ Leverage Data for Content Planning – Align new content drops with peak engagement periods (holidays & weekends).
+
+
+✅ Expand Family-Friendly Content – With most content being TV-MA, increasing PG & TV-Y shows can attract a broader audience.
+
+
+✅ Optimize Movie Length – Keeping movies in the 90–120 min range ensures maximum viewer retention.
+
 
 
 
