@@ -281,6 +281,7 @@ ORDER BY content_count DESC;
 🔍 Insight: Content additions peak in holiday months, optimizing engagement. Planning major releases during peak periods can maximize viewership.
 
 ## 21. Which countries lead content production each year?
+```sql
 select country,
 release_year,
 count(*) as content_count,
