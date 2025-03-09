@@ -107,6 +107,7 @@ group by release_year
 order by release_count  desc
 limit 1;
 ```
+🔍 Insight: Netflix's content production peaked in recent years, reflecting the global streaming boom. Identifying peak release years can help optimize future content strategies.
 
 ## 6. Content Trend Over the Years
 ```sql
@@ -116,6 +117,7 @@ from netflix
 group by release_year
 order by release_year asc;
 ```
+🔍 Insight: Content production has significantly increased in the last decade, proving Netflix’s aggressive expansion. Maintaining high-quality content while scaling up is key to sustaining growth.
 
 ## 7. Most Frequent Directors
 ```sql
@@ -127,6 +129,7 @@ group by director
 order by movie_count desc
 limit 10;
 ```
+🔍 Insight: A few directors have multiple projects on Netflix, showing strong relationships with top creators. Diversifying the director pool can bring fresh storytelling perspectives.
 
 ## 8. Most Popular Genres
 ```sql
@@ -138,8 +141,9 @@ group by listed_in
 order by genre_count desc
 limit 5;
 ```
+🔍 Insight: Drama, Comedy, and Documentaries dominate, but Thriller & Sci-Fi are on the rise. Netflix should monitor genre trends and invest in emerging categories.
 
-## 9. Number of TV Shows vs Movies Per Year
+## 9. TV Shows vs. Movies Per Year – Trend Analysis
 ```sql
 select release_year,
 		sum(case when type = 'Movie' then 1 else 0 end) as movie_count,
@@ -148,7 +152,8 @@ from netflix
 group by release_year
 order by release_year;
 ```
-			 
+🔍 Insight: The number of TV Shows is steadily increasing, reflecting a preference for long-term engagement. Balancing both formats ensures a diverse content strategy.
+
 ## 10. Most Common Movie Durations
 ```sql
 select duration,
@@ -159,6 +164,7 @@ group by duration
 order by DURATION_count desc
 limit 5;
 ```
+🔍 Insight: 90–120 minutes is the optimal movie length, aligning with audience attention spans. Shorter or excessively long movies may reduce viewer retention.
 
 ## 11. Countries with the Most TV Shows
 ```sql
@@ -170,6 +176,7 @@ and country is not null
 group by country 
 order by tv_show_count desc;
 ```
+🔍 Insight: The USA dominates, but South Korea is emerging as a content powerhouse (K-Dramas!). Investing in regional series can boost engagement.
 
 ## 12. Longest Running TV Shows
 ```sql
@@ -180,6 +187,7 @@ where type = 'TV Show'
 order by duration desc
 limit 5;
 ```
+🔍 Insight: Longer-running TV shows indicate strong audience loyalty. Netflix should identify and promote successful long-term series for retention.
 
 ## 13. Countries Producing the Most Movies
 ```sql
@@ -191,6 +199,7 @@ and country is not null
 group by country
 order by Movie_count desc;
 ```
+🔍 Insight: The USA, India, and the UK lead, but South Korea and Spain are growing rapidly. Expanding in high-demand regions ensures a competitive advantage.
 
 ## 14. Percentage of Content by Type
 ```sql
@@ -201,6 +210,7 @@ from netflix
 group by type
 order by content_count desc;
 ```
+🔍 Insight: Movies still dominate, but TV Shows are catching up. A hybrid content strategy will keep Netflix competitive.
 
 ## 15. Directors with the Most TV Shows
 ```sql
@@ -213,6 +223,7 @@ group by director
 order by director_count desc
 limit 5;
 ```
+🔍 Insight: Some directors specialize in high-impact series. Strengthening collaborations with proven talent can enhance Netflix’s content quality.
 
 ## 16. Most Recent Movie Releases
 ```sql
@@ -223,6 +234,7 @@ where type = 'Movie'
 order by release_year desc
 limit 5;
 ```
+🔍 Insight: Recent releases align with audience demand trends. Strategic release timing can maximize engagement and viewership.
 
 ## 17. Most Recent TV Shows
 ```sql
@@ -233,6 +245,7 @@ where type = 'TV Show'
 order by release_year desc
 limit 5;
 ```
+🔍 Insight: New TV Shows highlight Netflix’s evolving content strategy. Analyzing audience response can improve future content investments.
 
 ## 18. Directors Who Directed Multiple Genres
 ```sql
@@ -244,8 +257,9 @@ group by director
 having count(distinct listed_in) > 1
 order by  total_genres desc;
 ```
+🔍 Insight: Versatile directors bring diverse storytelling perspectives. Netflix should leverage multi-genre directors to reach wider audiences.
 
-## 19. Content Available by Region
+## 19. Content Availability by Region
 ```sql
 select country as Region,
 count(*) as total_content
@@ -254,8 +268,9 @@ where country is not null
 group by country
 order by total_content desc;
 ```
+🔍 Insight: Netflix heavily invests in certain regions. Expanding underrepresented markets can broaden its global subscriber base.
 
-## 20. Number of Movies/TV Shows Added Per Month
+## 20. Content Added Per Month – Seasonal Trends
 ```sql
 SELECT SUBSTR(date_added, 1, POSITION(' ' IN date_added) - 1) AS month , count(*) as content_count
 FROM netflix
@@ -263,9 +278,9 @@ WHERE date_added IS NOT NULL
 GROUP BY month
 ORDER BY content_count DESC;
 ```
+🔍 Insight: Content additions peak in holiday months, optimizing engagement. Planning major releases during peak periods can maximize viewership.
 
-## 21.Rank Countries by Content Production Each Year
-```sql
+## 21. Which countries lead content production each year?
 select country,
 release_year,
 count(*) as content_count,
@@ -275,8 +290,9 @@ where country is not null
 group by release_year , country
 order by release_year desc , rank;
  ```
+🔍 Insight: Some countries consistently dominate Netflix’s content pipeline. Tracking these trends helps identify investment opportunities.
 
-## 22.Find the Most Popular Rating Per Year
+## 22. How do content ratings change yearly?
 ```sql
 with rating_per_year as (
 	select rating,
@@ -294,8 +310,9 @@ from rating_per_year
 where rank = 1
 order by release_year;
 ```
-	
-## 23.Find the Top 3 Most Common Genres for Each Year
+🔍 Insight: Rating preferences shift over time, showing changes in audience demand. Tailoring content based on historical data can improve engagement.
+
+## 23. What are the top trending genres each year?
 ```sql
 with genre_rank as(
 		select release_year,
@@ -312,8 +329,9 @@ from genre_rank
 where rank <= 3
 order by release_year desc , rank;
 ```
+🔍 Insight: Certain genres gain or lose popularity annually. Tracking genre shifts helps align content strategy with audience demand.
 
-## 24.Identify Countries with Consistent Content Growth
+## 24. Identify Countries with Consistent Content Growth
 ```sql
 WITH content_growth AS (
     SELECT 
@@ -335,6 +353,8 @@ FROM content_growth
 WHERE prev_year_count IS NOT NULL
 ORDER BY country, release_year DESC;
 ```
+🔍 Insight: Regions with steady content expansion indicate high engagement. Netflix should prioritize these areas for future content investments.
+
 ## 📊 Key Takeaways & Business Recommendations
 
 ✅ Invest in Regional Content – Expanding into emerging markets like South Korea & Latin America can drive global growth.
