@@ -29,12 +29,12 @@ Netflix dominates the global streaming industry, but what drives its content str
 
 ✅ Empower Strategic Decisions – Deliver data-driven insights to optimize content curation and audience engagement. 🚀
 
-##📊 Dataset
+## 📊 Dataset
 
-📥 Source: **Dataset Link:** [Netflix Kaggle Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
+ 📥 Source: **Dataset Link:** [Netflix Kaggle Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 
-- **Dataset Link:** [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
+
 
 ## Schema
 
