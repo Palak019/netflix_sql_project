@@ -64,15 +64,16 @@ HAVING count(*) > 1;
 ```
 🔍 Insight: Some titles appear multiple times, possibly due to remakes, re-releases, or regional licensing variations. Netflix can optimize its catalog by reducing redundant content.
 
-## 2. Total Number of Movies and TV Shows
+## 2. Movies vs. TV Shows – Which Format Dominates?
 ```sql
 select type, 
 count(*) as total_count
 from netflix
 group by type;
 ```
+🔍 Insight: While movies have historically dominated, TV Shows are gaining traction, likely due to higher engagement and binge-watching culture. Strategic Move: Invest more in original series!
 
-## 3. Top 5 Countries with Most Content
+## 3. Top 5 Countries Producing the Most Content
 ```sql
 select country,
 count(*) as content_count
@@ -82,8 +83,9 @@ group by country
 order by content_count desc
 limit 5;
 ```
+🔍 Insight: The USA, India, and the UK lead in content production, reflecting Netflix’s strong partnerships with Hollywood and Bollywood. Regional Focus: Expanding into emerging markets like Korea & Latin America can increase subscriber growth.
 
-## 4. Most Common Ratings
+## 4. Most Common Ratings – What Does Netflix Prioritize?
 ```sql
 select rating,
 count(*) as rating_count
@@ -93,6 +95,7 @@ group by rating
 order by rating_count desc
 limit 5;
 ```
+🔍 Insight: A large share of content falls under TV-MA (Mature Audience), indicating Netflix’s focus on adult viewers. However, expanding family-friendly content (TV-Y, PG) could attract a broader demographic.
 
 ## 5. Year with the Most Releases
 ```sql
