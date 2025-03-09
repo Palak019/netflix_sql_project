@@ -1,5 +1,5 @@
 # 🎬 Netflix Movies & TV Shows Data Analysis using SQL
-# 🚀 Unveiling trends in Netflix content to drive data-backed decision-making!
+  🚀 Unveiling trends in Netflix content to drive data-backed decision-making!
 
 ![](https://github.com/Palak019/netflix_sql_project/blob/main/netflix%20logo.jpg)
 
@@ -33,9 +33,6 @@ Netflix dominates the global streaming industry, but what drives its content str
 
  📥 Source: [Netflix Kaggle Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
-
-
-
 ## Schema
 
 ```sql
@@ -56,15 +53,17 @@ CREATE TABLE netflix
     description  VARCHAR(550)
 );
 ```
-## Business Problems and Solutions
+## 📌 Business Problems & Insights
 
-## 1. Finding Duplicate Titles
+## 1. Duplicate Titles – Are Content Clones Common?
 ```sql
 SELECT title, COUNT(*) AS count
 FROM netflix
 GROUP BY title
 HAVING count(*) > 1;
 ```
+🔍 Insight: Some titles appear multiple times, possibly due to remakes, re-releases, or regional licensing variations. Netflix can optimize its catalog by reducing redundant content.
+
 ## 2. Total Number of Movies and TV Shows
 ```sql
 select type, 
