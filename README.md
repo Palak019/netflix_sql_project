@@ -31,7 +31,7 @@ Netflix dominates the global streaming industry, but what drives its content str
 
 ## 📊 Dataset
 
- 📥 Source: **Dataset Link:** [Netflix Kaggle Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
+ 📥 Source: [Netflix Kaggle Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 
 
